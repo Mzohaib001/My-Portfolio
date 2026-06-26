@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="page1">
+    <section class="hero-container">
+        
+        <div class="hero-text-side">
+            <span class="hero-subtitle">WELCOME TO MY PORTFOLIO</span>
+            <h1 class="hero-title">Hi, I'm <span class="highlight-text">Your Name</span></h1>
+            <p class="hero-description">
+                A passionate Django Developer crafting robust backend logic, clean database architectures, and interactive digital web experiences.
+            </p>
+            <div class="hero-buttons">
+                <a href="{% url 'contact' %}" class="btn-primary">Get In Touch</a>
+                <a href="#projects" class="btn-secondary">View Work</a>
+            </div>
+        </div>
+
+        <div class="hero-image-side">
+            <div class="aesthetic-image-box">
+               
+                <img src="{% static 'images/logo.png' %}" alt="My Profile Picture">
+            </div>
+        </div>
+
+    </section>
+</div>
+
+<div class="page2" id="projects">
+    <section class="projects-section">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+            <span class="section-subtitle">MY WORKS</span>
+            <h2 class="section-title">Featured <span class="highlight-text">Projects</span></h2>
+            <p class="section-description">Explore some of the recent web applications and systems I have developed using Django.</p>
+        </div>
+
+        <!-- Projects Grid Layout Container -->
+        <div class="project-grid">
+            
+            <!-- Project 1 Card -->
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <img src="{% static 'images/download.jpg' %}" alt="Ecommerce Project">
+                </div>
+                <div class="card-content">
+                    <h3>Ecommerce Project</h3>
+                    <p>A full-featured digital storefront built with secure checkout processing workflows.</p>
+                    <a href="#" class="card-link">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 2 Card -->
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <img src="{% static 'images/images.jpg' %}" alt="Portfolio Project">
+                </div>
+                <div class="card-content">
+                    <h3>Portfolio Project</h3>
+                    <p>An aesthetic, interactive space highlighting digital creations and development skills.</p>
+                    <a href="#" class="card-link">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 3 Card -->
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <img src="{% static 'images/images (1).jpg' %}" alt="Django APP Project">
+                </div>
+                <div class="card-content">
+                    <h3>Django APP Project</h3>
+                    <p>A fast, robust system utilizing secure customized architecture frameworks.</p>
+                    <a href="#" class="card-link">View Project →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+{% endblock %}
